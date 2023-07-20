@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <form class="form">
+            <h1>LOGIN HERE</h1>
+            <div class="form-group">
+                <label for="username" class="user">Username<i class="fas fa-user"></i></label>
+                <input type="email" required class="form-input"
+                name="username"
+                id="username"
+                autocomplete="off"
+                placeholder="username" />
+            </div>
+            <div class="form-group">
+                <label for="password" class="pass">Password<i class="fas fa-lock"></i></label>
+                <input type="password" required class="form-input"
+                name="password"
+                id="password"
+                minlength="8"
+                placeholder="password" />
+            </div>
+            <button type="submit">Login<i class="fas fa-sign-in-alt"></i></button>
+        </form>
+    </main>
+</body>
+</html>

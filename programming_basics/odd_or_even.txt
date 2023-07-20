@@ -1,0 +1,6 @@
+Start
+Get the number n from user
+if(n/2==0)
+then Print the number is even
+else, then print the number is odd
+stop

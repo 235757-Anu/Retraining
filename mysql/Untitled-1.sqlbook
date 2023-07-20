@@ -1,0 +1,90 @@
+-- SQLBook: Code
+create DATABASE pvr
+-- SQLBook: Code
+use pvr
+-- SQLBook: Code
+CREATE Table multiplexes(
+    multiplex_id INT PRIMARY KEY,
+    address VARCHAR(50),
+    screen_count INT,
+    total_seating INT
+)
+-- SQLBook: Code
+create table movies(
+    movie_id INT PRIMARY KEY,
+    movie_name VARCHAR(50),
+    language VARCHAR(50),
+    rating VARCHAR(20)
+)
+-- SQLBook: Code
+create TABLE screens(
+    screen_id int PRIMARY KEY,
+    screen_no INT,
+    multiplex_id int,
+    Foreign Key (multiplex_id) REFERENCES multiplexes(multiplex_id),
+    no_seats int,
+    no_seat_types int
+)
+-- SQLBook: Code
+CREATE Table shows(
+   show_id INT PRIMARY KEY,
+   screen_id INT,
+   Foreign Key (screen_id) REFERENCES screens(screen_id),
+   movie_id INT,
+   Foreign Key (movie_id) REFERENCES movies(movie_id),
+   show_date DATE,
+   show_time TIME 
+)
+-- SQLBook: Code
+CREATE Table screen_seat_type(
+    seat_type_id INT PRIMARY KEY,
+    screen_id INT,
+    Foreign Key (screen_id) REFERENCES screens(screen_id),
+    seat_type VARCHAR(50),
+    seat_count INT
+)
+-- SQLBook: Code
+CREATE Table screen_seats(
+    seat_id INT PRIMARY KEY,
+    screen_id INT,
+    Foreign Key (screen_id) REFERENCES screens(screen_id),
+    seat_no INT,
+    category VARCHAR(30),
+    price DECIMAL(3,2)
+)
+-- SQLBook: Code
+create Table schedule(
+    schedule_id INT PRIMARY KEY,
+    show_id INT,
+    Foreign Key (show_id) REFERENCES shows(show_id),
+    seat_id INT,
+    Foreign Key (seat_id) REFERENCES screen_seats(seat_id),
+    status VARCHAR(30)
+)
+-- SQLBook: Code
+use pvr
+-- SQLBook: Code
+insert into multiplexes(multiplex_id,address,screen_count,total_seating)
+VALUES(100,'Trivandrum',4,400)
+-- SQLBook: Code
+insert into multiplexes(multiplex_id,address,screen_count,total_seating)
+VALUES(102,'Ernakulam',5,550)
+-- SQLBook: Code
+insert into multiplexes(multiplex_id,address,screen_count,total_seating)
+VALUES(103,'Chalakudy',3,300)
+-- SQLBook: Code
+insert into multiplexes(multiplex_id,address,screen_count,total_seating)
+VALUES(104,'Kozhikode',4,450)
+-- SQLBook: Code
+DELETE from multiplexes where multiplex_id=103
+-- SQLBook: Code
+DELETE from multiplexes where multiplex_id=104
+-- SQLBook: Code
+insert into multiplexes(multiplex_id,address,screen_count,total_seating)
+VALUES(103,'Bangolre',7,750)
+-- SQLBook: Code
+DELETE from multiplexes where multiplex_id=103
+-- SQLBook: Code
+insert into multiplexes(multiplex_id,address,screen_count,total_seating)
+VALUES(103,'Chennai',7,750)
+-- SQLBook: Code

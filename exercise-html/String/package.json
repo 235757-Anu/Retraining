@@ -1,0 +1,14 @@
+{
+  "name": "string",
+  "version": "1.0.0",
+  "description": "",
+  "main": "string.js",
+  "scripts": {
+    "dev":"nodemon string.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

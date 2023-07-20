@@ -1,0 +1,30 @@
+.heading{
+    text-align: center;
+    font-family: monospace;
+    margin-bottom: 5%;
+    font-size: 300%;
+}
+.add{
+    padding: .5rem .5rem;
+    width: 25%;
+    margin-left: 33%;
+}
+button{
+    background-color: black;
+    padding: .5rem 1.5rem;
+    color: white;
+}
+button:hover{
+    background-color: grey;
+}
+.list{
+    margin-left: 35%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.container{
+    border: 2px solid #ccc;
+    margin: 5rem 18rem;
+    box-shadow: 0 0 10px rgb(174, 172, 172);
+    background-color: rgb(240, 230, 218);
+}

@@ -1,0 +1,74 @@
+<main class="container>
+<form class=form>
+<div class=form group>
+<label for=username>USername</label>
+<input type='tesxt"required="required" name=username id=username placeholder=username />
+</div>
+........password type =password minlength=6
+Email type=email
+DOB type=date
+<label for="isExperienced">Are you fresher?</label>
+Yes<input type="radio" name...id..value=yes>
+No<input type="radio" class ...name...id..value..>
+</div>
+Gender.....
+Are you interested in
+<input type="checkbox" class name id value>
+
+About yourself
+<textarea name id cols=30 rows="3"></textarea>
+
+subscription period
+<select name id class>
+<optionvalue="1>
+
+submit
+<button type="submit"> Register</button>
+
+
+
+CSS
+-------
+
+.container{
+width:60%
+padding 20px
+margin: 0 auto
+
+}
+
+.form{
+width:
+margin:
+padding:1rem
+border-radius:5px
+background-colour:
+box-shadow
+}
+.form-grouo{
+marginbottom:1rem
+width:100
+}
+
+label,input{
+display:block
+width:100%
+margin-bootom:.5rem
+font-size:1.25rem
+}
+
+form-group{
+font-size:1.25rem
+}
+
+
+input[type="radio],
+input[type="checkbox"]{
+margin-right
+font-size
+}
+
+
+
+
+

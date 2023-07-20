@@ -1,0 +1,35 @@
+-- SQLBook: Code
+SELECT 	CONCAT_WS(' ',first_name,last_name,'with Id',emp_no,'was hired on',DATE_FORMAT(hire_date,'%a %D %b %Y'))'Employee Description' from employees
+
+-- SQLBook: Code
+select * from employees where EXTRACT (YEAR FROM hire_date)=1989 AND EXTRACT ( MONTH FROM hire_date)=6
+-- SQLBook: Code
+select * from employees where EXTRACT(month FROM hire_date)=EXTRACT(MONTH FROM birth_date)
+-- SQLBook: Code
+SELECT * from employees where DATE_ADD(birth_date,INTERVAL 25 YEAR)=hire_date
+
+-- SQLBook: Code
+select e1.first_name,e1.gender,e1.hire_date,e2.first_name,e2.gender, e2.hire_date from employees
+ e1 JOIN employees e2 ON e1.first_name=e2.first_name AND
+ EXTRACT(MONTH FROM e1.hire_date)=EXTRACT(MONTH FROM e2.hire_date) where e1.gender='M' AND e2.gender='F'
+-- SQLBook: Code
+SELECT dept_no,dept_name,emp_no from departments JOIN dept_manager USING(dept_no)
+-- SQLBook: Code
+SELECT emp_no'Id',title'Job',CONCAT_WS(' ',first_name,last_name)'Employee',
+DATE_FORMAT(from_date,'%W %D %M %Y')'Started On',
+DATE_FORMAT(to_date,'%W %D %M %Y')'Ended At'
+from employees join titles using(emp_no)
+
+-- SQLBook: Code
+SELECT emp_no'Id',salary'Salary',CONCAT_WS(' ',first_name,last_name)'Employee',
+DATE_FORMAT(from_date,'%W %D %M %Y')'Paid From',
+DATE_FORMAT(to_date,'%W %D %M %Y')'Paid Fill'
+from employees join salaries using(emp_no)
+-- SQLBook: Code
+SELECT emp_no'Id',salary'salary',title'Title',CONCAT_WS(' ',first_name,last_name)'Employee',
+DATE_FORMAT(s.from_date,'%W %D %M %Y')'Paid From',
+DATE_FORMAT(s.to_date,'%W %D %M %Y')'Paid Fill',
+DATE_FORMAT(t.from_date,'%W %D %M %Y')'Started On',
+DATE_FORMAT(t.to_date,'%W %D %M %Y')'Ended At'
+from employees join salaries s using(emp_no)
+join titles t using(emp_no) limit 100

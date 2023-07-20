@@ -1,0 +1,9 @@
+-- SQLBook: Code
+use employees
+-- SQLBook: Code
+DELIMITER $$ CREATE Procedure GET_EMP_DETAILS()BEGIN SELECT emp_no, CONCAT_WS('-',first_name,last_name) 'Full Name' from employees; END$$ DELIMITER;
+
+CALL GET_EMP_DETAILS();
+-- SQLBook: Code
+DELIMITER $$ CREATE Procedure GET_EMP_DETAILS_BY_DEPT(IN DEPT_NO CHAR(4))BEGIN SELECT emp_no, CONCAT_WS('-',first_name,last_name) 'Full Name' from employees LIMIT 30; END$$ DELIMITER; 
+-- SQLBook: Code

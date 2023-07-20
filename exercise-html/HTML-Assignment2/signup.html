@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="signup.css" />
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <form class="form"><br>
+            <h1>NewsLetter Signup Form</h1><br>
+            <div class="form-group">
+                <label for="name">Your full name</label>
+                <input type="text" required class="form-input" name="name" id="name" autocomplete="off" 
+                placeholder="Fullname" /> 
+            </div>
+            <div class="form-group">
+                <label for="password">Your password</label>
+                <input type="password" required class="form-input" name="password" id="password" autocomplete="off" 
+                placeholder="Password" /> 
+            </div>
+            <div class="form-group">
+                <label for="edition">Your edition</label>
+                <select name="edition"
+                        id="edition"
+                        class="form-input">
+                    <option value="1">North Edition</option>
+                    <option value="2">other</option>
+                </select>
+            </div>
+            <button type="submit">Signup</button>
+        </form>
+    </main>
+            
+</body>
+</html>

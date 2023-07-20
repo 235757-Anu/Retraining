@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+*,
+html{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url('https://cdn.optinmonster.com/wp-content/uploads/2020/12/background2-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container{
+    margin-top: 13%;
+    margin-left: 25%;
+}
+.heading{
+    line-height: .5;
+    font-weight: 900;
+}
+.sub{
+    line-height: .4;
+    font-weight: 200;
+    font-size: 15px;
+    color: rgb(101, 98, 98);
+}
+.subs{
+    margin-top: 3%;
+}
+button{
+    background-color: rgb(131,193,31);
+    padding: 1rem 2rem;
+    border: none;
+    color:white;
+    font-size: 1;
+    width: 25%;
+    cursor: pointer;
+    transition: all .3s ease;
+    margin-bottom: 5%;
+}
+button:hover{
+    background-color: rgb(37, 177, 37);
+}

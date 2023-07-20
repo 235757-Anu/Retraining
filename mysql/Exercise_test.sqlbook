@@ -1,0 +1,24 @@
+-- SQLBook: Code
+CREATE DATABASE test;
+
+use test;
+-- SQLBook: Code
+CREATE Table Authors(
+    author_id int primary key,
+    author_name varchar(20),
+    gender VARCHAR(10),
+    author_email varchar(30),
+    join_date DATE
+)
+-- SQLBook: Code
+Alter Table authors ADD constraint chk_gender CHECK(gender IN('male','female'))
+-- SQLBook: Code
+create Table books(
+    book_id INT PRIMARY KEY,
+    title VARCHAR(50) NOT NULL,
+    price DECIMAL,
+    author_id INT,
+    Foreign Key (author_id) REFERENCES authors(author_id) 
+)
+-- SQLBook: Code
+select * from authors;

@@ -1,0 +1,29 @@
+2023-04-26 10:38:58.503 [main] INFO  in.stackroute.ust.Main - Starting Main using Java 17.0.2 on L885LTRV with PID 2880 (C:\Users\235757\ust\getting-started-with-swagger\target\classes started by 235757 in C:\Users\235757\ust\getting-started-with-swagger)
+2023-04-26 10:38:58.505 [main] DEBUG in.stackroute.ust.Main - Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-26 10:38:58.505 [main] INFO  in.stackroute.ust.Main - No active profile set, falling back to 1 default profile: "default"
+2023-04-26 10:38:59.272 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-26 10:38:59.329 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interfaces.
+2023-04-26 10:38:59.987 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-26 10:38:59.995 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-26 10:38:59.996 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-26 10:39:00.097 [main] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2023-04-26 10:39:00.097 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1550 ms
+2023-04-26 10:39:00.133 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-26 10:39:00.362 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-26 10:39:00.373 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:posts'
+2023-04-26 10:39:00.588 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-26 10:39:00.654 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-04-26 10:39:00.820 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-26 10:39:00.920 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-04-26 10:39:01.315 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-26 10:39:01.325 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-26 10:39:01.496 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-26 10:39:02.597 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
+2023-04-26 10:39:02.607 [main] INFO  in.stackroute.ust.Main - Started Main in 4.51 seconds (JVM running for 5.035)
+2023-04-26 10:39:47.627 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-26 10:39:49.139 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 916 ms
+2023-04-26 10:53:40.366 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s698ms234µs800ns).
+2023-04-26 11:35:13.627 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m29s455ms208µs200ns).
+2023-04-26 11:52:10.386 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-26 11:52:10.388 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-26 11:52:10.390 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

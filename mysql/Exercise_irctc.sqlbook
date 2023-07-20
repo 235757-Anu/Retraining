@@ -1,0 +1,39 @@
+-- SQLBook: Code
+create DATABASE irctc
+-- SQLBook: Code
+use irctc
+-- SQLBook: Code
+CREATE Table station(
+    station_id VARCHAR(50) PRIMARY KEY,
+    station_code VARCHAR(50),
+    station_name VARCHAR(50)
+);
+-- SQLBook: Code
+CREATE Table train(
+    train_id VARCHAR(50) PRIMARY KEY,
+    train_name VARCHAR(50),
+    start_station_id VARCHAR(50),
+    Foreign Key (start_station_id) REFERENCES station(station_id),
+    end_station_id VARCHAR(50),
+    Foreign Key (end_station_id) REFERENCES station(station_id),
+);
+-- SQLBook: Code
+CREATE table route(
+    route_id VARCHAR(50) PRIMARY KEY,
+    train_id VARCHAR(50),
+    Foreign Key (train_id) REFERENCES train(train_id),
+    station_id VARCHAR(50),
+    Foreign Key (station_id) REFERENCES station(station_id),
+    distance DECIMAL
+);
+-- SQLBook: Code
+CREATE Table schedule(
+    schedule_id VARCHAR(50) PRIMARY KEY,
+    route_id VARCHAR(50),
+    Foreign Key (route_id) REFERENCES route(route_id),
+    train_id VARCHAR(50),
+    Foreign Key (train_id) REFERENCES train(train_id),
+    departure_time TIME,
+    arrival_time TIME
+)
+-- SQLBook: Code

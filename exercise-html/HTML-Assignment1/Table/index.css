@@ -1,0 +1,36 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: none;
+  }
+  th, td {
+    border-color:  solid #999;
+    padding: 0.3em;
+    vertical-align: top;
+  }
+  th {
+    text-align: left;
+  }
+  th:nth-child(2),
+  td:nth-child(3),
+  td:nth-child(4) {
+    text-align: right;
+  }
+  tfoot th {
+    border-top-color:  solid #999;
+  }
+  tr:nth-child(odd) {
+    background-color: #eee;
+  }
+  #total{
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    text-align: right;
+  }
+  #tnumber{
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+  }
+  #first{
+    border-bottom: 1px solid #999;
+  }
